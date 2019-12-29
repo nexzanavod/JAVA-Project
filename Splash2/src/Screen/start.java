@@ -5,6 +5,9 @@
  */
 package Screen;
 
+import Screen.Next;
+import Screen.Next;
+
 /**
  *
  * @author nexza
@@ -142,7 +145,7 @@ public class start extends javax.swing.JFrame {
                 sc.setVisible(true);
             }
         });
-        Next n = new Next();
+        Login n = new Login();
         try{
              for(int i=0;i<=100;i++)
              {

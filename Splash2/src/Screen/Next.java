@@ -5,6 +5,9 @@
  */
 package Screen;
 
+import java.awt.Toolkit;
+import java.awt.event.WindowEvent;
+
 /**
  *
  * @author nexza
@@ -32,19 +35,20 @@ public class Next extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
+        Loginbutton = new javax.swing.JToggleButton();
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Screen/source.gif"))); // NOI18N
         jLabel3.setText("jLabel3");
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 204), 4));
         jPanel2.setLayout(null);
 
         jButton1.setBackground(new java.awt.Color(0, 0, 153));
@@ -52,14 +56,14 @@ public class Next extends javax.swing.JFrame {
         jButton1.setText("jButton1");
         jButton1.setBorder(null);
         jPanel2.add(jButton1);
-        jButton1.setBounds(350, 410, 120, 50);
+        jButton1.setBounds(360, 410, 120, 50);
 
         jButton2.setBackground(new java.awt.Color(0, 51, 153));
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("jButton2");
         jButton2.setBorder(null);
         jPanel2.add(jButton2);
-        jButton2.setBounds(40, 410, 120, 50);
+        jButton2.setBounds(50, 410, 120, 50);
 
         jButton3.setBackground(new java.awt.Color(0, 0, 153));
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
@@ -68,27 +72,20 @@ public class Next extends javax.swing.JFrame {
         jPanel2.add(jButton3);
         jButton3.setBounds(660, 410, 120, 50);
 
-        jTextField1.setBackground(new java.awt.Color(227, 227, 227));
-        jTextField1.setText("Some details in here.....");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jTextField1);
-        jTextField1.setBounds(0, 510, 810, 70);
-
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Screen/l.gif"))); // NOI18N
+        jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 204), 4));
         jPanel2.add(jLabel1);
-        jLabel1.setBounds(10, 170, 180, 190);
+        jLabel1.setBounds(20, 170, 180, 190);
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Screen/m.gif"))); // NOI18N
+        jLabel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 204), 4));
         jPanel2.add(jLabel4);
-        jLabel4.setBounds(310, 210, 200, 130);
+        jLabel4.setBounds(320, 170, 180, 190);
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Screen/n.gif"))); // NOI18N
+        jLabel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 204), 4));
         jPanel2.add(jLabel5);
-        jLabel5.setBounds(620, 180, 180, 160);
+        jLabel5.setBounds(620, 170, 180, 190);
 
         jPanel1.setBackground(new java.awt.Color(0, 153, 204));
 
@@ -117,11 +114,22 @@ public class Next extends javax.swing.JFrame {
         jPanel2.add(jPanel1);
         jPanel1.setBounds(0, 0, 820, 90);
 
+        Loginbutton.setBackground(new java.awt.Color(0, 153, 204));
+        Loginbutton.setForeground(new java.awt.Color(255, 255, 255));
+        Loginbutton.setText("LOGIN");
+        Loginbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LoginbuttonActionPerformed(evt);
+            }
+        });
+        jPanel2.add(Loginbutton);
+        Loginbutton.setBounds(370, 540, 115, 32);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 813, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 813, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -132,9 +140,11 @@ public class Next extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    private void LoginbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginbuttonActionPerformed
+       close();
+        Login w = new Login();
+         w.setVisible(true);
+    }//GEN-LAST:event_LoginbuttonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -173,6 +183,7 @@ public class Next extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JToggleButton Loginbutton;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -183,6 +194,9 @@ public class Next extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
+ private void close(){
+    WindowEvent winClosing = new WindowEvent(this,WindowEvent.WINDOW_CLOSING);
+    Toolkit.getDefaultToolkit().getSystemEventQueue().postEvent(winClosing);
+ }
 }
